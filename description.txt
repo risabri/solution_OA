@@ -1,0 +1,85 @@
+Task 3
+ming Language
+Java 8
+There are three stacks of disks. Disks on each stack are sorted by size in increasing order from
+the bottom to the top.
+Our goal is to move all disks from these stacks onto the fourth stack, which is initially empty. In
+one move the top element of one of the stacks can be moved to the fourth stack. After moving all
+disks onto the fourth stack, they should be sorted by size in decreasing order from bottom to the
+top.
+You are given three arrays: stack1 of N1 integers, stack2 of N2 integers, and stack3 of N3
+integers. Each array represents a stack in which the elements are listed from bottom to top (i.e
+the last element of the array is the top element of the stack).
+Find the sequence of moves after which all the disks will be on the fourth stack, sorted by size in
+descending order. You may assume that there are no two disks of the same size.
+For example for stack1 = [2, 71, stack2 = [4, 5) and stack3 = (11, the sequence of moves is
+1-2-2-1-3:
+• move disk of size 7 from stack 1
+move disk of size 5 from stack 2
+move disk of size 4 from stack 2
+• move disk of size 2 from stack 1
+• move disk of size 1 from stack 3
+After these moves the elements of the fourth stack are sorted in descending order: [7, 5, 4, 2, 1]
+and all other stacks are empty.
+Write a function:
+clase Solution ( public String solution(int(] stacki, int(] stack2, int(| stack3): )
+??
+that, given three arrays, stack1, stack and stack3, returns a string representing the sequence
+of moves which should be performed. The J-th character of the string should be the stack number
+(1,2 or 3) from whose top the element should be moved in the J-th move.
+All changes saved
+而
+
+Task 2
+- Programming Language
+Java 8
+You are given a string S consisting of N letters 'a' and/or 'b'. In one move, you can swap one
+letter for the other ('a' for "b' or 'b' for 'a).
+Write a function solution that, given such a string S, returns the minimum number of
+moves required to obtain a string containing no instances of three identical consecutive
+letters.
+Examples:
+1. Given S = "baaaaa*, the function should return 1. The string without three identical
+consecutive letters which can be obtained in one move is "baabaa".
+2. Given S = "baaabbaabbba", the function should return 2. There are four valid strings
+obtainable in two moves: for example, "bbaabbaabbaa".
+3. Given S = "baabab", the function should return O.
+Write an efficient algorithm for the following assumptions:
+N is an integer within the range [0.200,000];
+• string S is made only of the characters "a" and/or "b".
+Copyright 2009 - 2022 by Codility Limited. All Rights Reserved. Unauthorized copying, publication or disclosure
+prohibited,
+
+Everyone has a favorite number. Jacob's favorite number is X and Jayden's favorite
+number is Y. A non-empty array A consisting of N integers is given. Jacob and Jayden art
+interested in occurrences of their favorite numbers X and Y in array A. They are looking fo
+the longest leading fragment (prefix) of array A in which there is an equal number of
+occurrences of X and Y. More formally, they are looking for the largest P, such that O ≤ P
+N and the number of occurrences of X equals the number of occurrences of Y in the
+sequence A[0], A[1], ..., A[P).
+For example, consider X = 7, Y = 42 and the following array A:
+A[0]
+A[11
+A[2]
+A[3]
+A(4]
+A[5]
+6
+42
+11
+A
+42
+There are three prefixes of array A containing the same number of occurrences of Xand
+Y:
+• P= 0: A(0.0) = (6] contains neither 7 nor 42;
+• P= 3: A[0..3] = [6, 42, 11, 7) contains one 7 and one 42;
+P= 4: A0.4 = 6, 42, 11, 7, 1] also contains one 7 and one 42.
+The largest value of P we are looking for is 4, because the only longer corresponding
+prefix A[O..5] contains one 7 and two 42s.
+G
+Jacob and Jayden have implemented a function:
+9
+claBe Solution ( publie 1nt eolution(int X, int Y, int(] A): )
+which, given integers X, Y and a non-empty array A consisting of N integers, returns the
+maximum value of P for which A(O..P] contains the same number of occurrences of X and
+Y, or -1 if no such value exists,

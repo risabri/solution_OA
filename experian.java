@@ -59,3 +59,30 @@ public int solution(String s) {
 //task3
 
 
+public String solution (int [] stack1, int [] stack2 , int [] stack3) {
+
+    HashMap<Integer,integer> map = new HashMap<>();
+
+    map.put(1,)
+
+    //i am not sure how to do this one 
+    // idea 
+    // creating hashmap
+    // map each stack to its array value for example
+    // stack1 --> 1
+    //stack1 -->2
+    //stack2-->3
+   // stack4-->1
+   // stack5-->2
+  // but i don't know how to do this without iterating three time ? so o(n^3)
+  // thinking merging the three arrays ?
+  // or just simply putting all the array vlues into a stack and pop / push ? how to keep track of which stack ?
+  // cause i have to return the stack number not the value
+
+
+
+
+
+
+
+}
