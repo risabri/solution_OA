@@ -61,9 +61,10 @@ public int solution(String s) {
 
 public String solution (int [] stack1, int [] stack2 , int [] stack3) {
 
-    HashMap<Integer,integer> map = new HashMap<>();
-
-    map.put(1,)
+    //stack1=[2,7]
+    //stack2[4,5]
+    //stack3[1]]
+    //stack4[]
 
     //i am not sure how to do this one 
     // idea 
@@ -78,8 +79,32 @@ public String solution (int [] stack1, int [] stack2 , int [] stack3) {
   // thinking merging the three arrays ?
   // or just simply putting all the array vlues into a stack and pop / push ? how to keep track of which stack ?
   // cause i have to return the stack number not the value
+    //stack 1 - 
+
+    int lastelement1 = stack1[stack1.length-1]; 
+    int lastelement2 = stack2[stack2.length-1];
+    int lastelement3=  stack3[stack3.length-1];
+    String string  = "" ;
 
 
+    //if last number  is the biggest then we append it to the string 
+    while ( stack1  !=null  || stack2 !=null || stack3  !=null){
+    if ( lastelement1 > lastelement2 && lastelement1 > lastelement3 ){
+        string.append(1);
+        stack1.pop();
+    }
+
+    if ( lastelement2 > lastelement1 && lastelement2 > lastelement3 ){
+        string.append(2);
+        stack2.pop();
+    }
+    if ( lastelement3 > lastelement1 && lastelement3 > lastelemen2 ){
+        string.append(3);
+        stack3.pop();
+    }
+}
+
+    return string;
 
 
 
