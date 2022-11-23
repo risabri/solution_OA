@@ -68,29 +68,38 @@ public int solution(String s) {
 
     String s = "";
 
+   // ArrayList<int []> list = new ArrayList<int[]>();
+    
+
+    
+
     List a1 = Arrays.asList(stack1);
     List a2 = Arrays.asList(stack2);
     List a3 = Arrays.asList(stack3);
 
-    int last_element1 = a1.size()-1;
-    int last_element2 = a2.size()-1;
-    int last_element3 = a3.size()-1;
+    int last_index1 = a1.size()-1;
+    int last_index2 = a2.size()-1;
+    int last_index3 = a3.size()-1;
+    int last_ele1 = (int) a1.get(last_index1);
+    int last_ele2 = (int)a2.get(last_index2);
+    int last_ele3 = (int)a3.get(last_index3);
 
-    int maximum = Math.max(last_element1, Math.max(last_element2,last_element3));
+
+    int maximum = Math.max(last_ele1, Math.max(last_ele2,last_ele3));
  
 
-    if ( maximum == last_element1 ){
-        a1.remove(last_element1);
+    if ( maximum == last_ele1 ){
+        a1.remove(last_ele1);
         s="1-";
 
     }
-    if ( maximum == last_element2 ){
-        a2.remove(last_element2);
+    if ( maximum == last_ele2 ){
+        a2.remove(last_ele2);
         s="2-";
 
     }
-    if ( maximum == last_element3 ){
-        a3.remove(last_element1);
+    if ( maximum == last_ele3 ){
+        a3.remove(last_ele3);
         s="3-";
 
     }
