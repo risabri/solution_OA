@@ -66,48 +66,49 @@ public int solution(String s) {
 
  public static String solution(int [] stack1, int [] stack2 , int [] stack3) {
 
+
+
     String s = "";
-
-   // ArrayList<int []> list = new ArrayList<int[]>();
+    int c1 = stack1.length - 1;
+    int c2 = stack2.length - 1;
+    int c3 = stack3.length - 1;
+    int ele1 = 0, ele2 = 0, ele3 = 0;
+    while (ele1 != Integer.MIN_VALUE || ele2 != Integer.MIN_VALUE || ele3 != Integer.MIN_VALUE) {
+        // System.out.println(ele1 + " " + ele2 + " "+ ele3);
+        if (c1 < 0) {
+            ele1 = Integer.MIN_VALUE;
+        } else {
+            ele1 = stack1[c1];
+        }
+        if (c2 < 0) {
+            ele2 = Integer.MIN_VALUE;
+        } else {
+            ele2 = stack2[c2];
+        }
+        if (c3 < 0) {
+            ele3 = Integer.MIN_VALUE;
+        } else {
+            ele3 = stack3[c3];
+        }
+        if (ele1 > ele2 && ele1 > ele3) {
+            s+="1-";
+            c1--;
+        }
+        if (ele2 > ele1 && ele2 > ele3) {
+            s+="2-";
+            c2--;
+        }
+        if (ele3 > ele1 && ele3 > ele2) {
+            s+="3-";
+            c3--;
+        }
+    }
+    return s.substring(0, s.length() - 1);
+    
+}
     
 
     
-
-    List a1 = Arrays.asList(stack1);
-    List a2 = Arrays.asList(stack2);
-    List a3 = Arrays.asList(stack3);
-
-    int last_index1 = a1.size()-1;
-    int last_index2 = a2.size()-1;
-    int last_index3 = a3.size()-1;
-    int last_ele1 = (int) a1.get(last_index1);
-    int last_ele2 = (int)a2.get(last_index2);
-    int last_ele3 = (int)a3.get(last_index3);
-
-
-    int maximum = Math.max(last_ele1, Math.max(last_ele2,last_ele3));
- 
-
-    if ( maximum == last_ele1 ){
-        a1.remove(last_ele1);
-        s="1-";
-
-    }
-    if ( maximum == last_ele2 ){
-        a2.remove(last_ele2);
-        s="2-";
-
-    }
-    if ( maximum == last_ele3 ){
-        a3.remove(last_ele3);
-        s="3-";
-
-    }
-
-    return s;
-
-    }
-
 
     public static void main(String[] args){
         
